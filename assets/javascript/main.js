@@ -153,3 +153,6 @@ bg3.addEventListener('click', () =>{
     bg1.classList.remove('active');
     changeBG();
 })
+
+/* ================ ESTILO DEL PUNTERO ================== */
+

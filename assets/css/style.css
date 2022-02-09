@@ -133,8 +133,13 @@
 
    .container{
        max-width: 968px;
-      margin: auto;
+       margin: auto;
    }
+   .row 
+    {
+      display: flex;
+      flex-wrap: wrap;
+    }
    .padd-15{
        padding-left: 15px;
        padding-right: 15px;
@@ -348,6 +353,161 @@
         animation: ani-mouse 2s linear infinite;
     }
 
+/* ================ ABOUT ME ================== */
+
+.about{
+    padding: 0 0 50px 0;
+}
+.about .container h2{
+    padding: 15px 0 15px 10px;
+}
+.about-img
+{
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.social-icons2{
+    padding-top: 200px;
+    margin-left: 60px;
+}
+.social-icons2 li{
+    display: grid;
+    font-size: 30px;
+}
+.home .intro .social-icons li:not(:last-child){
+    margin-right: var(--m-1-5);
+}
+.about-content
+{
+  flex: 0 0 70%;
+  max-width: 70%;
+}
+.about-content .about-text,
+.about-content .skills
+{
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.skill-bars{
+flex: 0 0 60%;
+max-width: 100%;
+margin-top: 5%;
+padding: 25px 30px;
+width: 400px;
+height: 400px;
+box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+border-radius: 10px;
+}
+
+.skill-bars .bar{
+margin: 35px 0;
+}
+.skill-bars .bar:first-child{
+margin-top: 0px;
+}
+.skill-bars .bar .info{
+margin-bottom: 5px;
+}
+.skill-bars .bar .info span{
+font-weight: 500;
+font-size: 17px;
+opacity: 0;
+animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+    100%{
+        opacity: 1;
+    }
+}
+.skill-bars .bar .progress-line{
+height: 10px;
+width: 100%;
+background: #f0f0f0;
+position: relative;
+transform: scaleX(0);
+transform-origin: left;
+border-radius: 10px;
+box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+            0 1px rgba(255,255,255,0.8);
+animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate {
+    100%{
+        transform: scaleX(1);
+    }
+}
+.bar .progress-line span{
+height: 100%;
+position: absolute;
+border-radius: 10px;
+transform: scaleX(0);
+transform-origin: left;
+background: var(--color-primary);
+animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.bar .progress-line.html span{
+width: 95%;
+}
+.bar .progress-line.css span{
+width: 92%;
+}
+.bar .progress-line.jquery span{
+width: 85%;
+}
+.bar .progress-line.python span{
+width: 75%;
+}
+.bar .progress-line.mysql span{
+width: 82%;
+}
+.progress-line span::before{
+position: absolute;
+content: "";
+top: -10px;
+right: 0;
+height: 0;
+width: 0;
+border: 7px solid transparent;
+border-bottom-width: 0px;
+border-right-width: 0px;
+border-top-color: #000;
+opacity: 0;
+animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line span::after{
+position: absolute;
+top: -28px;
+right: 0;
+font-weight: 500;
+background: #000;
+color: #fff;
+padding: 1px 8px;
+font-size: 12px;
+border-radius: 3px;
+opacity: 0;
+animation: showText2 0.5s 1.5s linear forwards;
+}
+    @keyframes showText2 {
+    100%{
+        opacity: 1;
+    }
+}
+.progress-line.html span::after{
+content: "95%";
+}
+.progress-line.css span::after{
+content: "92%";
+}
+.progress-line.jquery span::after{
+content: "90%";
+}
+.progress-line.python span::after{
+content: "75%";
+}
+.progress-line.mysql span::after{
+content: "82%";
+}
 
 
 /* ================ SELECCION DE TEMA ================== */
@@ -511,16 +671,206 @@
         .nav-close,
         .nav-toggle{
             display: inline-block;
+            padding: 0 25px 0 25px;
         }
         .customize-theme .card
       {
         width: 75vw;
       }
+        .about{
+            padding: 0 0 50px 0;
+        }
+        .about .container h2{
+            padding: 15px 0 15px 10px;
+        }
+        .about-img
+        {
+            flex: 0 0 25%;
+            max-width: 25%;
+            position: relative;
+        }
+        .social-icons2{
+            padding-top: 90%;
+            margin-left: 40%;
+        }
+        .social-icons2 li{
+            display: grid;
+            font-size: 25px;
+        }
+        .home .intro .social-icons li:not(:last-child){
+            margin-right: var(--m-1-5);
+        }
+        .about-content
+        {
+            flex: 0 0 65%;
+            max-width: 65%;
+        }
     }
 
     @media only screen and (max-width:576px){
-    .customize-theme .card{
-        width: 96vw;
-        padding: 1rem;
-      }
+
+        .about{
+            padding: 0 0 50px 0;
+        }
+        .about .container h2{
+            padding: 15px 0 15px 10px;
+            font-size: 20px;
+            text-align: center;
+        }
+        .about-img
+        {
+          flex: 0 0 50%;
+          max-width: 50%;
+          margin-left: calc(25%);
+        }
+        .social-icons2{
+            padding-top: 25%;
+            margin-left: -40%;
+            transform: translate(25px, 10px);
+        }
+        .social-icons2 li{
+            display: inline-block;
+            font-size: 18px;
+            padding: 0 5% 0 5%;
+        }
+        .social-icons li:not(:last-child){
+            margin-right: var(--m-1-5);
+        }
+        .about-content
+        {
+          flex: 0 0 70%;
+          max-width: 70%;
+          margin-top: 55px;
+          margin-left: 55px;
+        }
+        .about-text{
+            font-size: 12px;
+        }
+        .btn-cv{
+            font-size: 10px;
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+        .skill-bars{
+            flex: 0 0 60%;
+            max-width: 100%;
+            margin-top: 5%;
+            padding: 25px 30px;
+            box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+            border-radius: 10px;
+        }
+        
+        .skill-bars .bar{
+        margin: 35px 0;
+        }
+        .skill-bars .bar:first-child{
+        margin-top: 0px;
+        }
+        .skill-bars .bar .info{
+        margin-bottom: 5px;
+        }
+        .skill-bars .bar .info span{
+        font-weight: 500;
+        font-size: 12px;
+        opacity: 0;
+        animation: showText 0.5s 1s linear forwards;
+        }
+        @keyframes showText {
+            100%{
+                opacity: 1;
+            }
+        }
+        .skill-bars .bar .progress-line{
+        height: 10px;
+        width: 100%;
+        background: #f0f0f0;
+        position: relative;
+        transform: scaleX(0);
+        transform-origin: left;
+        border-radius: 10px;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+                    0 1px rgba(255,255,255,0.8);
+        animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+        }
+        @keyframes animate {
+            100%{
+                transform: scaleX(1);
+            }
+        }
+        .bar .progress-line span{
+        height: 100%;
+        position: absolute;
+        border-radius: 10px;
+        transform: scaleX(0);
+        transform-origin: left;
+        background: var(--color-primary);
+        animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+        }
+        .bar .progress-line.responsable span{
+        width: 95%;
+        }
+        .bar .progress-line.carismatico span{
+        width: 92%;
+        }
+        .bar .progress-line.puntual span{
+        width: 85%;
+        }
+        .bar .progress-line.autoexigente span{
+        width: 82%;
+        }
+        .bar .progress-line.atento span{
+        width: 90%;
+        }
+        .progress-line span::before{
+        position: absolute;
+        content: "";
+        top: -10px;
+        right: 0;
+        height: 0;
+        width: 0;
+        border: 7px solid transparent;
+        border-bottom-width: 0px;
+        border-right-width: 0px;
+        border-top-color: #000;
+        opacity: 0;
+        animation: showText2 0.5s 1.5s linear forwards;
+        }
+        .progress-line span::after{
+        position: absolute;
+        top: -28px;
+        right: 0;
+        font-weight: 500;
+        background: #000;
+        color: #fff;
+        padding: 1px 8px;
+        font-size: 10px;
+        border-radius: 3px;
+        opacity: 0;
+        animation: showText2 0.5s 1.5s linear forwards;
+        }
+            @keyframes showText2 {
+            100%{
+                opacity: 1;
+            }
+        }
+            .progress-line.responsable span::after{
+            content: "95%";
+        }
+            .progress-line.carismatico span::after{
+            content: "92%";
+        }
+            .progress-line.puntual span::after{
+            content: "85%";
+        }
+            .progress-line.autoexigente span::after{
+            content: "82%";
+        }
+            .progress-line.atento span::after{
+            content: "90%";
+        }
+
+        .customize-theme .card{
+            width: 96vw;
+            padding: 1rem;
+        }
     }
