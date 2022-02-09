@@ -446,19 +446,19 @@ transform-origin: left;
 background: var(--color-primary);
 animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
 }
-.bar .progress-line.html span{
+.bar .progress-line.responsable span{
 width: 95%;
 }
-.bar .progress-line.css span{
+.bar .progress-line.carismatico span{
 width: 92%;
 }
-.bar .progress-line.jquery span{
+.bar .progress-line.puntual span{
 width: 85%;
 }
-.bar .progress-line.python span{
+.bar .progress-line.autoexigente span{
 width: 75%;
 }
-.bar .progress-line.mysql span{
+.bar .progress-line.atento span{
 width: 82%;
 }
 .progress-line span::before{
