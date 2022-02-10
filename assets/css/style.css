@@ -614,7 +614,7 @@ content: "88%";
     width: calc(100% / 4 - 10px);
 }
 
-.card.shake{
+.cardi.shake{
     animation: shake 0.35s ease-in-out;
 }
 @keyframes shake {
@@ -1056,13 +1056,13 @@ content: "88%";
         .cards{
             height: 100%;
             width: 100%;
-          }
-          .cardi .front-view img{
+         }
+         .cardi .front-view img{
             width: 10px;
           }
-          .cardi .back-view img{
+         .cardi .back-view img{
             max-width: 35px;
-          }
+         }
 
         .customize-theme .card{
             width: 96vw;
