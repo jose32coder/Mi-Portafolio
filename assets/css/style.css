@@ -398,7 +398,7 @@
 /* ================ ABOUT ME ================== */
 
 .about{
-    padding: 0 0 50px 0;
+    padding: 65px 0 50px 0;
 }
 .about .container h2{
     padding: 15px 0 15px 10px;
@@ -430,6 +430,9 @@
 {
   flex: 0 0 100%;
   max-width: 100%;
+}
+.about-text{
+    text-align: justify;
 }
 
 .skill-bars{
@@ -499,10 +502,10 @@ width: 92%;
 width: 85%;
 }
 .bar .progress-line.autoexigente span{
-width: 75%;
+width: 85%;
 }
 .bar .progress-line.atento span{
-width: 82%;
+width: 88%;
 }
 .progress-line span::before{
 position: absolute;
@@ -514,7 +517,7 @@ width: 0;
 border: 7px solid transparent;
 border-bottom-width: 0px;
 border-right-width: 0px;
-border-top-color: #000;
+border-top-color: var(--color-primary);
 opacity: 0;
 animation: showText2 0.5s 1.5s linear forwards;
 }
@@ -523,8 +526,7 @@ position: absolute;
 top: -28px;
 right: 0;
 font-weight: 500;
-background: #000;
-color: #fff;
+background: transparent;
 padding: 1px 8px;
 font-size: 12px;
 border-radius: 3px;
@@ -546,12 +548,119 @@ content: "92%";
 content: "90%";
 }
 .progress-line.autoexigente span::after{
-content: "75%";
+content: "85%";
 }
 .progress-line.atento span::after{
-content: "82%";
+content: "88%";
 }
 
+
+/* ================ CONOCIMIENTO ================== */
+
+.conocimiento{
+    min-height: 100vh;
+    margin-top: 5%;
+    padding-top: 8%;
+}
+
+.conocimiento .container .title-conocimiento{
+    padding: 0 0 0 8px;
+    font-size: var(--h2-font-size);
+}
+.gamecard{
+    min-height: 100vh;
+    display: flex;
+    flex: 0 0 25%;
+    align-items: center;
+    justify-content: center;
+}
+.conocimiento-text{
+    font-size: var(--h4-font-size);
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 2.5% 3%;
+    border-radius: 10px;
+    text-align: justify;
+}
+.wrapper{
+    height: 38rem;
+    width: 38rem;
+    padding: 25px;
+    background: transparent;
+    margin: 5% 18%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+    position: relative;
+}
+.cards, .cardi, .view{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cards{
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cards .cardi{
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    height: calc(100% / 4 - 10px);
+    width: calc(100% / 4 - 10px);
+}
+
+.card.shake{
+    animation: shake 0.35s ease-in-out;
+}
+@keyframes shake {
+    0%, 100%{
+        transform: translateX(0);
+    }
+    20%{
+        transform: translateX(-13px);
+    }
+    40%{
+        transform: translateX(13px);
+    }
+    60%{
+        transform: translateX(-8px);
+    }
+    80%{
+        transform: translateX(8px);
+    }
+}
+
+.cardi .view{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 7px;
+    background: #fff;
+    pointer-events: none;
+    backface-visibility: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.25s linear;
+}
+.cardi .front-view img{
+    width: 2.5rem;
+}
+.cardi .back-view img{
+    max-width: 7rem;
+}
+.cardi .back-view{
+    transform: rotateY(-180deg);
+}
+.cardi.flip .back-view{
+    transform: rotateY(0);
+}
+.cardi.flip .front-view{
+    transform: rotateY(180deg);
+}
 
 /* ================ SELECCION DE TEMA ================== */
 
@@ -625,7 +734,7 @@ content: "82%";
     background: var(--color-primary);
 }
 .customize-theme .choose-color span:nth-child(1){
-    background: hsl(152, 80%, 25%);
+    background: hsl(160, 60%, 25%);
 }
 .customize-theme .choose-color span:nth-child(2){
     background: hsl(315, 87%, 27%);
@@ -671,10 +780,6 @@ content: "82%";
     background: hsl(252, 30%, 17%);
     color: #fff;
 }
-.customize-theme .choose-bg .bg-3{
-    background: hsl(252, 30%, 10%);
-    color: #fff;
-}
 .customize-theme .choose-bg > div span{
     width: 1.4rem;
     height: 1.4rem;
@@ -716,10 +821,9 @@ content: "82%";
             display: inline-block;
             padding: 0 25px 0 25px;
         }
-        .customize-theme .card
-      {
-        width: 75vw;
-      }
+        .customize-theme .card{
+            width: 75vw;
+        }
         .about{
             padding: 0 0 50px 0;
         }
@@ -747,6 +851,25 @@ content: "82%";
         {
             flex: 0 0 65%;
             max-width: 65%;
+        }
+        .wrapper{
+            height: 28rem;
+            width: 28rem;
+            padding: 25px;
+            box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+            border-radius: 10px;
+            align-items: center;
+            justify-content: center;
+        }
+        .cards{
+            height: 100%;
+            width: 100%;
+        }
+        .cardi .front-view img{
+            width: 17px;
+        }
+        .cardi .back-view img{
+            max-width: 40px;
         }
     }
 
@@ -788,6 +911,7 @@ content: "82%";
         }
         .about-text{
             font-size: var(--h3-font-size);
+            letter-spacing: 1px;
         }
         .btn-cv{
             font-size: var(--h3-font-size);
@@ -859,10 +983,10 @@ content: "82%";
         width: 85%;
         }
         .bar .progress-line.autoexigente span{
-        width: 82%;
+        width: 85%;
         }
         .bar .progress-line.atento span{
-        width: 90%;
+        width: 88%;
         }
         .progress-line span::before{
         position: absolute;
@@ -883,7 +1007,7 @@ content: "82%";
         top: -28px;
         right: 0;
         font-weight: 500;
-        background: #000;
+        background: var(--color-primary);
         color: #fff;
         padding: 1px 8px;
         font-size: 10px;
@@ -906,14 +1030,96 @@ content: "82%";
             content: "85%";
         }
             .progress-line.autoexigente span::after{
-            content: "82%";
+            content: "8%";
         }
             .progress-line.atento span::after{
-            content: "90%";
+            content: "88%";
         }
+        .conocimiento-text{
+            font-size: var(--h4-font-size);
+            flex: 0 0 100%;
+            max-width: 100%;
+            letter-spacing: 1px;
+            padding: 2.5% 20%;
+            border-radius: 10px;
+            text-align: justify;
+        }
+
+        .wrapper{
+            height: 21.5rem;
+            width: 21.5rem;
+            padding: 25px;
+            box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+            border-radius: 10px;
+            transform: translate(25px, 0);
+        }
+        .cards{
+            height: 100%;
+            width: 100%;
+          }
+          .cardi .front-view img{
+            width: 10px;
+          }
+          .cardi .back-view img{
+            max-width: 35px;
+          }
 
         .customize-theme .card{
             width: 96vw;
             padding: 1rem;
         }
     }
+
+    @media only screen and (max-width:451px){
+        .wrapper{
+            height: 19.5rem;
+            width: 19.5rem;
+            padding: 25px;
+            box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+            border-radius: 10px;
+            transform: translate(10px, 0);
+        }
+        .cards{
+            height: 100%;
+            width: 100%;
+          }
+          .cardi .front-view img{
+            width: 10px;
+          }
+          .cardi .back-view img{
+            max-width: 35px;
+          }
+
+        .customize-theme .card{
+            width: 96vw;
+            padding: 1rem;
+        }
+    }
+
+    @media only screen and (max-width:405px){
+        .wrapper{
+            height: 17.5rem;
+            width: 17.5rem;
+            padding: 5px 15px 5px 15px; 
+            box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+            border-radius: 10px;
+            transform: translate(10px, 0);
+        }
+        .cards{
+            height: 100%;
+            width: 100%;
+          }
+          .cardi .front-view img{
+            width: 8px;
+          }
+          .cardi .back-view img{
+            max-width: 30px;
+          }
+
+        .customize-theme .card{
+            width: 96vw;
+            padding: 1rem;
+        }
+    }
+
+    
