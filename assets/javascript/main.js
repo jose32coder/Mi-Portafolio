@@ -154,5 +154,25 @@ bg3.addEventListener('click', () =>{
     changeBG();
 })
 
-/* ================ ESTILO DEL PUNTERO ================== */
+/* ================ AUDIO ================== */
 
+let music = document.getElementById('music');
+let icon1 = document.getElementById('play');
+let icon2 = document.getElementById('pause');
+
+icon1.onclick = sonar;
+icon2.onclick = sonar;
+
+    function sonar(){
+        if(music.paused){
+            music.play();
+            icon1.style.display = 'none';
+            icon2.style.display = 'flex';
+        }
+        else{
+            music.pause();
+            icon1.style.display = 'flex';
+            icon2.style.display = 'none';
+        } 
+    }
+    
