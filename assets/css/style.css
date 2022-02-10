@@ -302,6 +302,49 @@
     .home .intro .social-icons a{
         font-size: var(--h3-font-size);
     }
+    .home .right .middle{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 12% 0 0 0;
+        transform: translate(0, 40px);
+    }
+    .home .right p{
+        font-size: var(--h4-font-size);
+        transform: translate(0, 60px);
+    }
+
+    #play, #pause{
+        border: none;
+        height: 62px;
+        width: 62px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        outline: none;
+        transition: 0.5s;
+        background: var(--color-primary);
+   }
+   #pause{
+       display: none;
+   }
+   .home button:hover{
+       background:  var(--color-primary);
+   }
+   .home .right #play::before,
+   .home .right #pause::before{
+       color: #fff;
+       font-size: 20px;
+   }
+   .home .right .btn-back::before,
+   .home .right .btn-next::before{
+    color: var(--color-primary);
+    font-size: 20px;
+}
     .scroll-down{
         position: absolute;
         bottom: var(--m-2-5);
@@ -367,12 +410,13 @@
   max-width: 25%;
 }
 .social-icons2{
-    padding-top: 200px;
+    padding-top: 100px;
     margin-left: 60px;
 }
 .social-icons2 li{
     display: grid;
-    font-size: 30px;
+    padding-top: 10%;
+    font-size: var(--h3-font-size);
 }
 .home .intro .social-icons li:not(:last-child){
     margin-right: var(--m-1-5);
@@ -395,7 +439,7 @@ max-width: 100%;
 margin-top: 5%;
 padding: 25px 30px;
 width: 400px;
-height: 400px;
+height: auto;
 box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
 border-radius: 10px;
 }
@@ -411,7 +455,7 @@ margin-bottom: 5px;
 }
 .skill-bars .bar .info span{
 font-weight: 500;
-font-size: 17px;
+font-size: var(--h3-font-size);
 opacity: 0;
 animation: showText 0.5s 1s linear forwards;
 }
@@ -744,10 +788,10 @@ content: "82%";
           margin-left: 55px;
         }
         .about-text{
-            font-size: 12px;
+            font-size: var(--h3-font-size);
         }
         .btn-cv{
-            font-size: 10px;
+            font-size: var(--h3-font-size);
             margin-left: 25px;
             margin-bottom: 15px;
         }
@@ -771,7 +815,7 @@ content: "82%";
         }
         .skill-bars .bar .info span{
         font-weight: 500;
-        font-size: 12px;
+        font-size: var(--h3-font-size);
         opacity: 0;
         animation: showText 0.5s 1s linear forwards;
         }
