@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--=============== LINE ICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.lineicons.com/3.0/lineicons.css">
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>Manuel - Portafolio</title>
+</head>
+<body id="body" class="body">
+    <div class="main" id="main">
+        <div id="preloader" class="preloader">
+            <div class="infinityChrome">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        
+            <!-- Safari and others -->
+            <div class="infinity">
+                <div>
+                    <span></span>
+                </div>
+                <div>
+                    <span></span>
+                </div>
+                <div>
+                    <span></span>
+                </div>
+            </div>
+        
+            <!-- Stuff -->
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none;">
+                <defs>
+                    <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                        <feBlend in="SourceGraphic" in2="goo" />
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+
+        <header class="header" id="header"> 
+            <nav class="nav container padd-15">
+                <a href="#" class="nav-logo animatedtitle">
+                    <h2 class="">Manuel</h2>
+                </a>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item animatedInicio">
+                            <a href="#home" class="nav-link">Inicio</a>
+                        </li>
+                        <li class="nav-item animatedAcerca">
+                            <a href="#about" class="nav-link">Acerca de</a>
+                        </li>
+                        <li class="nav-item animatedConocimiento">
+                            <a href="#conocimiento" class="nav-link">Conocimiento</a>
+                        </li>
+                        <li class="nav-item animatedContacto">
+                            <a href="#contact" class="nav-link">Contacto</a>
+                        </li>
+                    </ul>
+                    <div class="nav-close" id="nav-close">
+                        <i class="lni lni-close"></i>
+                    </div>
+                </div>
+                <div class="nav-btns">
+                    <!-- theme change btn -->
+                    <i class="lni lni-pallet change-theme" id="theme-button"></i>
+                    <!-- toggle btn -->
+                    <div class="nav-toggle" id="nav-toggle">
+                        <i class="lni lni-grid-alt"></i>
+                </div>
+            </nav>
+        </header> 
+        <main class="main-content">
+            <section class="home" id="home">
+                <div class="container">
+                    <div class="intro">
+                        <img src="assets/img/avatar-1.svg" alt="Manuel" class="animatedImage">
+                        <h1 class="animatedTitulo">José Manuel</h1>
+                        <p class="animatedInfo info-text">Desarrollador Front End</p>
+                        <ul class="social-icons animatedIcons">
+                            <li><a href="https://www.linkedin.com/in/jos%C3%A9-manuel-l%C3%B3pez-12b19221b/" target="_blank"><i class="lni lni-linkedin-original"></i></a></li>
+                            <li><a href="https://www.behance.net/d78e91b8/moodboards" target="_blank"><i class="lni lni-behance-original"></i></a></li>
+                            <li><a href="https://wa.me/584245883315?text=¡Saludos!%20Estoy%20interesado%20%20en%20una%20página%20web." target="_blank"><i class="lni lni-whatsapp"></i></a></li>
+                            <li><a href="https://www.facebook.com/josemanuel.lopez.5095110/" target="_blank"><i class="lni lni-facebook"></i></a></li>
+                            <li><a href="mailto:josemanuel180601@gmail.com?subject=Información%20de%20tu%20trabajo." target="_blank"><i class="lni lni-envelope"></i></a></li>
+                        </ul>
+                        <div class="animatedBtnContact">
+                            <a href="#contact" class="btn btn-default">¡Contáctame!</a>
+                        </div>
+                        <div class="scroll-down">
+                            <a href="#about" class="mouse-wrapper">
+                                <span>Baja el scroll</span>
+                                <span class="mouse">
+                                    <span class="wheel"></span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+            <section class="about section" id="about">
+                <div class="container">
+                    <h2 class="animatedAboutMe" data-aos="fade-right">Acerca de mi...</h2>
+                    <div class="row">
+                        <div class="about-img padd-15">
+                            <!-- avatar img -->
+                            <img src="assets/img/avatar-2.svg" alt="" data-aos="fade-right">
+                            <ul class="social-icons2" data-aos="fade-right">
+                                <li><a href="https://www.linkedin.com/in/jos%C3%A9-manuel-l%C3%B3pez-12b19221b/" target="_blank"><i class="lni lni-linkedin-original"></i></a></li>
+                                <li><a href="https://www.behance.net/d78e91b8/moodboards" target="_blank"><i class="lni lni-behance-original"></i></a></li>
+                                <li><a href="https://wa.me/584245883315?text=¡Saludos!%20Estoy%20interesado%20%20en%20una%20página%20web." target="_blank"><i class="lni lni-whatsapp"></i></a></li>
+                                <li><a href="https://www.facebook.com/josemanuel.lopez.5095110/" target="_blank"><i class="lni lni-facebook"></i></a></li>
+                                <li><a href="mailto:josemanuel180601@gmail.com?subject=Información%20de%20tu%20trabajo." target="_blank"><i class="lni lni-envelope"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="about-content padd-15">
+                            <div class="rounded">
+                                <div class="row">
+                                    <div class="about-text padd-15" data-aos="fade-right">
+                                        <!-- about text -->
+                                        <p>Mi nombre es José Manuel López, soy un desarrollador web Front End de 20 años de edad nacido en Venezuela, creo que está demás decir que me encanta la informática, siendo este una de mis pasiones desde los 16 años de edad, me encantaría poder resolver tus problemas en tecnología si está a mi alcance o crear algún proyecto para tí, espero te sientas a gusto en mi página. De igual forma puedes contactarme y saber mas de mí, espero que te guste mi portafolio.
+                                            <br> <span>¡Estamos a tu servicio! :D</span> </p>
+                                        <div> <br>
+                                            <a href="assets/cv/CV José Manuel.pdf" download="CV - José Manuel" class="btn btn-default btn-cv" data-aos="fade-right">Descargar CV</a>
+                                        </div>
+                                    </div>
+                                    <div class="skills padd-15 skill-bars" data-aos="fade-right">
+                                        <div class="bar">
+                                        <div class="info">
+                                            <span>Responsable</span>
+                                        </div>
+                                        <div class="progress-line responsable">
+                                            <span></span>
+                                        </div>
+                                        </div>
+                                        <div class="bar">
+                                        <div class="info">
+                                            <span>Carismático</span>
+                                        </div>
+                                        <div class="progress-line carismatico">
+                                            <span></span>
+                                        </div>
+                                        </div>
+                                        <div class="bar">
+                                        <div class="info">
+                                            <span>Puntual</span>
+                                        </div>
+                                        <div class="progress-line puntual">
+                                            <span></span>
+                                        </div>
+                                        </div>
+                                        <div class="bar">
+                                        <div class="info">
+                                            <span>Autoexigente</span>
+                                        </div>
+                                        <div class="progress-line autoexigente">
+                                            <span></span>
+                                        </div>
+                                        </div>
+                                        <div class="bar">
+                                        <div class="info">
+                                            <span>Atento</span>
+                                        </div>
+                                        <div class="progress-line atento">
+                                            <span></span>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section conocimiento" id="conocimiento">
+                <div class="container">
+                    <!-- section title -->
+                    <h2 class="title-conocimiento" data-aos="fade-right">Conocimiento.</h2>
+                    <div class="gamecard">
+                        <div class="row row-2">
+                            <div class="conocimiento-text padd-15">
+                                <!-- about text -->
+                                <h2 data-aos="fade-right">Juguemos un rato.</h2>
+                                <p data-aos="fade-right">Espero que hasta ahora te esté gustando mi página web imagino que ahora debes estar preguntandote que es lo que sé, ¿no?, bueno, la manera en que lo mostraré será a través de un juego sencillo es por eso que el siguiente recuadro es el famoso juego "memory card".
+                                Para que lo entiendas mejor cada recuadro tiene una pareja y cada pareja de cartas significa una de las habilidades que manejo, ¿bien?. <br> <br>
+                                
+                                <h3 data-aos="fade-right">¡Juega con ellas, diviertete y descubre mis conocimientos!</h3> </p>
+                            </div>
+                                <div class="wrapper" data-aos="fade-right">
+                                    <ul class="cards">
+                                        <li class="cardi">
+                                            <div class="view front-view">
+                                            <img src="assets/img/tecnologias/interrogation.jpg" alt="icon">
+                                            </div>
+                                            <div class="view back-view">
+                                            <img src="assets/img/tecnologias/img-1.png" alt="card-img2">
+                                            </div>
+                                        </li>
+                                        <li class="cardi">
+                                            <div class="view front-view">
+                                                <img src="assets/img/tecnologias/interrogation.jpg" alt="icon">
+                                            </div>
+                                            <div class="view back-view">
+                                            <img src="assets/img/tecnologias/img-2.png" alt="card-img2">
+                                            </div>
+                                        </li>
+                                        <li class="cardi">
+                                            <div class="view front-view">
+                                            <img src="assets/img/tecnologias/interrogation.jpg" alt="icon">
+                                            </div>
+                                            <div class="view back-view">
+                                            <img src="assets/img/tecnologias/img-3.png" alt="card-img2">
+                                            </div>
+                                        </li>
+                                        <li class="cardi">
+                                            <div class="view front-view">
+                                                <img src="assets/img/tecnologias/interrogation.jpg" alt="icon">
+                                            </div>
+                                            <div class="view back-view">
+                                            <img src="assets/img/tecnologias/img-4.png" alt="card-img2">
+                                            </div>
+                                        </li>
+                                        <li class="cardi">
+                                            <div class="view front-view">
+                                                <img src="assets/img/tecnologias/interrogation.jpg" alt="icon">
+                                            </div>
+                                            <div class="view back-view">
+                                            <img src="assets/img/tecnologias/img-5.png" alt="card-img2">
+                                            </div>
+                                        </li>
+                                        <li class="cardi">
+                                            <div class="view front-view">
+                                                <img src="assets/img/tecnologias/interrogation.jpg" alt="icon">
+                                            </div>
+                                            <div class="view back-view">
+                                            <img src="assets/img/tecnologias/img-6.png" alt="card-img2">
+                                            </div>
+                                        </li>
+                                        <li class="cardi">
+                                            <div class="view front-view">
+                                                <img src="assets/img/tecnologias/interrogation.jpg" alt="icon">
+                                            </div>
+                                            <div class="view back-view">
+                                            <img src="assets/img/tecnologias/img-7.png" alt="card-img2">
+                                            </div>
+                                        </li>
+                                        <li class="cardi">
+                                            <div class="view front-view">
+                                                <img src="assets/img/tecnologias/interrogation.jpg" alt="icon">
+                                            </div>
+                                            <div class="view back-view">
+                                            <img src="assets/img/tecnologias/img-8.png" alt="card-img2">
+                                            </div>
+                                        </li>
+                                        <li class="cardi">
+                                            <div class="view front-view">
+                                            <img src="assets/img/tecnologias/interrogation.jpg" alt="icon">
+                                            </div>
+                                            <div class="view back-view">
+                                            <img src="assets/img/tecnologias/img-1.png" alt="card-img2">
+                                            </div>
+                                        </li>
+                                        <li class="cardi">
+                                            <div class="view front-view">
+                                                <img src="assets/img/tecnologias/interrogation.jpg" alt="icon">
+                                            </div>
+                                            <div class="view back-view">
+                                            <img src="assets/img/tecnologias/img-2.png" alt="card-img2">
+                                            </div>
+                                        </li>
+                                        <li class="cardi">
+                                            <div class="view front-view">
+                                            <img src="assets/img/tecnologias/interrogation.jpg" alt="icon">
+                                            </div>
+                                            <div class="view back-view">
+                                            <img src="assets/img/tecnologias/img-3.png" alt="card-img2">
+                                            </div>
+                                        </li>
+                                        <li class="cardi">
+                                            <div class="view front-view">
+                                                <img src="assets/img/tecnologias/interrogation.jpg" alt="icon">
+                                            </div>
+                                            <div class="view back-view">
+                                            <img src="assets/img/tecnologias/img-4.png" alt="card-img2">
+                                            </div>
+                                        </li>
+                                        <li class="cardi">
+                                            <div class="view front-view">
+                                                <img src="assets/img/tecnologias/interrogation.jpg" alt="icon">
+                                            </div>
+                                            <div class="view back-view">
+                                            <img src="assets/img/tecnologias/img-5.png" alt="card-img2">
+                                            </div>
+                                        </li>
+                                        <li class="cardi">
+                                            <div class="view front-view">
+                                                <img src="assets/img/tecnologias/interrogation.jpg" alt="icon">
+                                            </div>
+                                            <div class="view back-view">
+                                            <img src="assets/img/tecnologias/img-6.png" alt="card-img2">
+                                            </div>
+                                        </li>
+                                        <li class="cardi">
+                                            <div class="view front-view">
+                                                <img src="assets/img/tecnologias/interrogation.jpg" alt="icon">
+                                            </div>
+                                            <div class="view back-view">
+                                            <img src="assets/img/tecnologias/img-7.png" alt="card-img2">
+                                            </div>
+                                        </li>
+                                        <li class="cardi">
+                                            <div class="view front-view">
+                                                <img src="assets/img/tecnologias/interrogation.jpg" alt="icon">
+                                            </div>
+                                            <div class="view back-view">
+                                            <img src="assets/img/tecnologias/img-8.png" alt="card-img2">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact section" id="contact">
+                <div class="row row-3">
+                    <div class="section-gap"></div>
+                    <div class="wrapper2">
+                        <h2 class="subtitle-contact" data-aos="fade-right">Contacto.</h2>
+                        <h4 class="sub-title text-center" data-aos="fade-right">¡Hablemos!
+                        </h4>
+                        <h3 class="global-title text-center" data-aos="fade-right">Contáctame</h3>
+                        <div class="d-grid contact-view">
+                            <div class="cont-details">
+                                <div class="cont-top">
+
+                                    <div class="cont-text text-center" data-aos="fade-right">
+                                        <span class="lni lni-whatsapp text-primary"></span>
+                                    </div>
+                                    <div class="cont-right" data-aos="fade-right">
+                                        <h6>WhatsApp</h6>
+                                        <p class="parrafo"><a href="https://wa.me/584245883315?text=¡Saludos!%20Estoy%20interesado%20%20en%20una%20página%20web." target="_blank">+58 - 4245883315</a></p>
+                                    </div>
+                                </div>
+                                <div class="cont-top margin-up" data-aos="fade-right">
+                                    <div class="cont-left text-center">
+                                        <span class="lni lni-envelope"></span>
+                                    </div>
+                                    <div class="cont-right" data-aos="fade-right">
+                                        <h6>Email</h6>
+                                        <p class="parrafo"><a href="mailto:josemanuel180601@gmail.com?subject=Información%20de%20tu%20trabajo." target="_blank">josemanuel180601@gmail.com</a></p>
+                                    </div>
+                                </div>
+                                <div class="cont-top margin-up" data-aos="fade-right">
+                                    <div class="cont-left text-center">
+                                        <span class="lni lni-facebook"></span>
+                                    </div>
+                                    <div class="cont-right" data-aos="fade-right">
+                                        <h6>Facebook</h6>
+                                        <p class="parrafo"><a href="https://www.facebook.com/josemanuel.lopez.5095110/" target="_blank">josemanuel.lopez.5095110/</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="map-content" data-aos="fade-right">
+                                <form action="assets/php/correos.php" class="form-box" id="form-box" method="post">
+                                        <div class="twice-two">
+                                            <div class="">
+                                                <label class="label-responsive" for="nom">Nombre *</label>
+                                                <input type="text"  class="form-control" name="nombre" placeholder="Nombre" id="nom" required>
+                                            </div>
+                                            <div class="">
+                                                <label class="label-responsive" for="ape">Apellido *</label>
+                                                <input type="text" class="form-control" name="apellido" placeholder="Apellido" id="ape" required>
+                                            </div>
+                                        </div>
+                                        <div class="twice-two">
+                                            <div class="">
+                                                <label class="label-responsive" for="email">Email *</label>
+                                                <input type="text" class="form-control" name="email" id="email" placeholder="Example@example.com" id="" required>
+                                            </div>
+                                            <div class="">
+                                                <label class="label-responsive" for="telefono">Teléfono *</label>
+                                                <input type="text" class="form-control" name="telefono" placeholder="+58 123 - 4567890" id="telefono" required>
+                                            </div>
+                                        </div>
+                                        <div class="twice">
+                                            <label class="label-responsive" for="asunto">Asunto *</label>
+                                            <input type="text" class="form-control" name="asunto" placeholder="Asunto" id="asunto" required>
+                                        </div>
+                                        <label class="label-responsive" for="message">Mensaje *</label>
+                                        <textarea name="message" class="form-control" id="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                                        <br><br>
+                                        <button type="submit" class="btn btn-default">Enviar</button>
+                                </form>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        <div class="customize-theme">
+            <div class="card">
+                <h2>Configura tu vista</h2>
+                <p>Elige el tamaño de fuente, color y color de fondo</p>
+                <div class="font-size">
+                    <h3>Tamaño de fuente</h3>
+                    <div>
+                        <h6>Aa</h6>
+                        <div class="choose-size">
+                            <span class="font-size-1"></span>
+                            <span class="font-size-2"></span>
+                            <span class="font-size-3 active"></span>
+                            <span class="font-size-4"></span>
+                        </div>
+                        <h3>Aa</h3>
+                    </div>
+                </div>
+                <div class="color">
+                    <h3>Color</h3>
+                    <div class="choose-color">
+                        <span class="color-1"></span>
+                        <span class="color-2"></span>
+                        <span class="color-3 active"></span>
+                        <span class="color-4"></span>
+                        <span class="color-5"></span>
+                    </div>
+                </div>
+                <div class="background">
+                    <h3>Color de fondo</h3>
+                    <div class="choose-bg">
+                        <div class="bg-1">
+                            <span></span>
+                            <h5 for="bg-1">Claro</h5>
+                        </div>
+                        <div class="bg-2">
+                            <span></span>
+                            <h5 for="bg-2">Oscuro</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script src="assets/javascript/main.js"></script>
+</body>
+</html>
